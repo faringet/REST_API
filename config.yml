@@ -2,6 +2,6 @@
 
 is_debug: true
 listen:
-  type: sock
-#  bind_ip: 0.0.0.0
-#  port: 10000
+  type: tcp
+  bind_ip: 0.0.0.0
+  port: 10000
