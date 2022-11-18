@@ -32,11 +32,11 @@ func main() {
 	}
 	storage := db.NewStorage(mongoDBClient, cfg.MongoDB.Collection, logger)
 
-	user.User{
+	user1 := user.User{
 		ID:           "",
-		Email:        "",
-		Username:     "",
-		PasswordHash: "",
+		Email:        "far@gmail.com",
+		Username:     "faringet",
+		PasswordHash: "12345",
 	}
 	user1ID, err := storage.Create(context.Background(), user1)
 	if err != nil {
