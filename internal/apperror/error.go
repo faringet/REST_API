@@ -38,3 +38,8 @@ func NewAppError(err error, message, developerMessage, code string) *AppError {
 		Code:             code,
 	}
 }
+
+func systemError(err error) *AppError { //метод оборачаивает "не мои" ошибки в системные
+	return NewAppError(err, "internal system error", err.Error(), "US-000000")
+
+}
